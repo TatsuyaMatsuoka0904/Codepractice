@@ -5,15 +5,15 @@
 
 def prime(n)
 	if n < 2
-		return puts "f"
+		return puts "合成数"
 	elsif n == 2
-		return puts"a"
+		return puts"素数"
 	end
 
     (2..n-1).each do |x|
-		return puts "f"  if n % x == 0
+		return puts "合成数"  if n % x == 0
 	end
-	 return puts"a"
+	 return puts"素数"
 end
 while true
 puts "数字を入力してください"
