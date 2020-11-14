@@ -15,7 +15,8 @@ def prime(n)
 	end
 	 return puts"a"
 end
-
+while true
 puts "数字を入力してください"
 n = gets.chomp.to_i
 prime(n)
+end
