@@ -10,4 +10,3 @@ if num1 <= num2  && num2 <= num3
 else
 	puts "NO"
 end
-	
