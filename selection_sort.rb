@@ -7,5 +7,5 @@ def selection_sort(array)
 		end
 		array[i], array[min] = array[min], array[i]
 	end
-	array
+array
 end
