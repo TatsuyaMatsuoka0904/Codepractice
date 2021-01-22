@@ -12,7 +12,7 @@
 #     sum += num1 if num2 % 2 == 0
 #     num1 = num2
 #     num2 = num1 + num2
-# end
+# end　フィボナッチは、数字を入れ込みまくって作る
 
 # puts sum
 sum = 0
