@@ -1,6 +1,6 @@
-the_board = {'top-L': '0', 'top-M': '0', 'top-R': '0',
-             'mid-L': '0', 'mid-M': '0', 'mid-R': '0',
-             'low-L': '0', 'low-M': '0', 'low-R': '0', }
+the_board = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
+             'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ',
+             'low-L': ' ', 'low-M': ' ', 'low-R': ' ', }
 
 
 def print_board(board):
@@ -11,4 +11,15 @@ def print_board(board):
     print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
 
 
-print_board(the_board)
+# print_board(the_board)
+
+ture = 'X'
+for i in range(9):
+    print_board(the_board)
+    print(ture + 'の番です。')
+    move = input()
+    the_board[move] = ture
+    if ture == 'X':
+        ture = 'O'
+    else:
+        ture = 'X'
