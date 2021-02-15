@@ -19,7 +19,7 @@ V,T,S,D=gets.split(" ").map &:to_i
 
 
 if V*T <= D && V*S >= D
-    puts "No"
+    puts "strike"
 else
-    puts "Yes"
+    puts "Hit"
 end
