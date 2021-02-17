@@ -3,3 +3,14 @@
 #自分の持っているアメを 1個食べる。先に操作を行えなくなった者の負けです。どちらが勝つでしょうか？
 
 
+# A,B,C =gets.split.to_i
+
+A = 2 
+B = 2
+C = 0 #Asenkou
+
+if C = 0 && A > B
+    puts "Takahasi"
+elsif C = 0 && A < B
+    puts "Aoki"
+end
