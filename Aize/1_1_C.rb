@@ -7,8 +7,10 @@
 # Output
 # Print the area and perimeter of the rectangle in a line. The two integers should be separated by a single space.
 
+
 nums = gets.chomp.split(' ')
 qur = nums[0].to_i * nums[1].to_i
-out = 2 *(nums[0] + nums[1])
+out = 2 *(nums[0].to_i + nums[1].to_i)
 
-print qur,"",out
+# print qur, out
+print qur, " " , out
