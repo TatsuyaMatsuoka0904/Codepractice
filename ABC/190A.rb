@@ -8,9 +8,12 @@
 A = 2 
 B = 2
 C = 0 #Asenkou
-
-if C = 0 && A > B
-    puts "Takahasi"
-elsif C = 0 && A < B
-    puts "Aoki"
+def kelo
+    if C == 0 && A > B
+        puts "Takahasi"
+    elsif C == 0 && A < B
+        puts "Aoki"
+    end
 end
+
+puts kelo
