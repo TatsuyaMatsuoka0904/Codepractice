@@ -10,7 +10,7 @@
 
 x = gets.chomp.split(' ')
 
-if x[0].to_i < x[1].to_i < x[2].to_i
+if x[0].to_i < x[1].to_i && x[1].to_i < x[2].to_i
     puts "Yes"
 else
     puts "No"
