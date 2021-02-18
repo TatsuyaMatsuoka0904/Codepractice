@@ -10,4 +10,7 @@
 
 r = gets.chomp.to_f
 
-s 
+s = r * r * Math::PI
+a = r * 2 * Math::PI
+
+puts s,a
