@@ -16,5 +16,6 @@ while true
     s = gets.chomp
 	if s.include?("?")
         break
+    end
 	puts eval(s)
 end
