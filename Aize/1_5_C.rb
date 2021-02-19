@@ -26,5 +26,11 @@ while true
     if x == 0 && y == 0
         break
     end
-    
+    x.times do |i|
+        y.times do |j|
+            print (i+j) % 2 == 0 ? '#' : '.'
+		end
+        puts
+	end
+	puts
 end
