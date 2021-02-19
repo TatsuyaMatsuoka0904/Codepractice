@@ -18,3 +18,7 @@ for i in 0..x-1
     end
     puts n
 end
+
+# n×m の行列 A と、m×1 の列ベクトルb を読み込み、
+# A と b の積を出力する
+
