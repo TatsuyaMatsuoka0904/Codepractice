@@ -32,10 +32,7 @@
 # Print the output result of the above program for given integer n.
 
 
-x = gets.chomp.to_i
-z = 1
-
-while z <= x and
-    y = z
-    if y % 3 == 0
-        print 
+n = gets.chomp.to_i
+num = []
+(1..n).each {|i| num << i if i % 3 == 0 || i.to_s.include?("3") }
+puts " #{ num.join(" ") }"
