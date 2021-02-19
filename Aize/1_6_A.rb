@@ -12,8 +12,6 @@
 # Output
 # Print the reversed sequence in a line. Print a single space character between adjacent elements (Note that your program should not put a space character after the last element).
 
-x = gets.chomp.to_i
-a = gets.chomp.split(" ")
-ans = a.sort.reverse
-
-print ans.join(" ")
+n = gets.to_i
+i = gets.split.map(&:to_i).reverse
+puts i.join(" ")
