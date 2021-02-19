@@ -17,9 +17,8 @@
 # Constraints
 # The number of characters in the sentence < 1200
 
-
 x = gets(nil).chomp.downcase.split("")
 
 ("a".."z").each do |i|
-    puts i,":",x.count(i)
+    puts "#{i} : #{x.count(i)}"
 end
