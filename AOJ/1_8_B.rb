@@ -9,4 +9,10 @@
 
 # Output
 # For each dataset, print the sum of digits in x.
-
+while true
+    x =gets.chomp.split("").map(&:to_i).inject(:+)
+    if x == 0
+        break
+    end
+    puts x
+end
