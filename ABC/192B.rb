@@ -1,17 +1,12 @@
-s = gets.chomp.split('').map(&:to_s)
-k = 1
-s.each{|i|
-    if((k % 2 != 0) && ((i =~ /^[a-z]+$/) == 0))
-    elsif((k % 2 == 0) && ((i =~ /^[A-Z]+$/) == 0))
+str = gets.chomp
+f = true
+
+str.size.times{|i|
+    if i % 2 == 0
+        f &= str[i] == str[i].downcase
     else
-        puts "No"
-        exit
+        f &= str[i] == str[i].upcase
     end
-    k += 1
+
 }
-puts "Yes"
-
-
-
-s = gets.chomp.split("").map(&:to_s)
-
+puts f ? "Yse" : "No"
