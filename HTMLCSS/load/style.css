@@ -21,7 +21,7 @@
     animation: rotate 2.5s linear infinite;
     
 }
-
+/* 回転の指示 */
 @keyframes rotate{
     to{
         transform: rotate(360deg);
@@ -36,6 +36,7 @@
     animation: scale 1.5s linear infinite;
 }
 
+/* サイズの動きを加える */
 @keyframes scale{
     50%{
         transform: scale(1.2);
@@ -44,13 +45,13 @@
     }
 }
 
+
+/* 図形の重心と形 */
 .loading span:nth-child(1){
     border-radius: 50% 50% 0 50%;
     background-color: #e77f67;
     transform-origin: bottom right;
 }
-
-
 
 .loading span:nth-child(2){
     border-radius: 50% 50% 50% 0;
