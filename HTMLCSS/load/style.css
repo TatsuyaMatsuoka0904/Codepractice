@@ -41,7 +41,7 @@
     50%{
         transform: scale(1.2);
         /* スライムっぽく */
-        width: 20px;
+        /* width: 20px; */
     }
 }
 
