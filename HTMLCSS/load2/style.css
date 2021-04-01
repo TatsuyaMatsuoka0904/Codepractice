@@ -40,9 +40,7 @@ span{
     font-weight: arial;
     color: lightslategray;
     margin: 9px;
-
-    animation: scale 1.5s linear infinite;
-    box-shadow: 5px 0 1px red,-5px 0  1px aqua ,  -7px 0 1px blue;
+    animation: scale 2.0s linear infinite;
 }
 
 /* サイズの動きを加える */
@@ -50,14 +48,17 @@ span{
     0% {
         transform: translate(0px, 0px) rotateZ(1deg);
         filter: blur(1px);
+        box-shadow: 5px 0 1px red,-5px 0  1px aqua ,  -7px 0 1px blue;
     }
     2% {
         transform: translate(2px, 2px) rotateZ(4deg);
         filter: blur(1px);
+        box-shadow: 5px 0 1px red,-5px 0  1px aqua ,  -7px 0 1px blue;
     }
     4% {
         transform: translate(0px, 2px) rotateZ(0deg);
-        filter: blur(2px);
+        /* filter: blur(2px); */
+        box-shadow: 5px 0 1px red,-5px 0  1px aqua ,  -7px 0 1px blue;
     }
     6% {
         transform: translate(12px, 0px) rotateZ(-2deg);
