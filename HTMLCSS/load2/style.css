@@ -34,6 +34,7 @@
     background-color: brown;
     margin: 9px;
     animation: scale 1.5s linear infinite;
+    box-shadow: 5px 4px 1px red,  7px 6px 1px blue;
 }
 
 /* サイズの動きを加える */
