@@ -27,30 +27,40 @@
         /* transform: rotate(360deg); */
     }
 }
+span{
+    margin-left: 2px;
+    text-align:center;
+}
 
 .loading span{
     width: 32px;
     height: 32px;
     background-color: brown;
+    font-size: 21px;
+    font-weight: arial;
+    color: lightslategray;
     margin: 9px;
-    filter: blur(1px);
+
     animation: scale 1.5s linear infinite;
-    box-shadow: 5px 4px 1px red,-5px -4px 1px aqua ,  -7px -6px 1px blue;
+    box-shadow: 5px 0 1px red,-5px 0  1px aqua ,  -7px 0 1px blue;
 }
 
 /* サイズの動きを加える */
 @keyframes scale{
     0% {
-        transform: translate(0px, 0px) rotateZ(1deg)
+        transform: translate(0px, 0px) rotateZ(1deg);
+        filter: blur(1px);
     }
     2% {
-        transform: translate(2px, 2px) rotateZ(4deg)
+        transform: translate(2px, 2px) rotateZ(4deg);
+        filter: blur(1px);
     }
     4% {
-        transform: translate(0px, 2px) rotateZ(0deg)
+        transform: translate(0px, 2px) rotateZ(0deg);
+        filter: blur(2px);
     }
     6% {
-        transform: translate(12px, 0px) rotateZ(-2deg)
+        transform: translate(12px, 0px) rotateZ(-2deg);
     }
     8% {
         transform: translate(0px, 0px) rotateZ(0deg)
