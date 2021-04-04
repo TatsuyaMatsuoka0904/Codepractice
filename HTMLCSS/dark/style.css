@@ -1,0 +1,13 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+.light {
+    background: #fff;
+    color: #333;
+  }
+.dark {
+    background: #000;
+    color: #ddd
+}
