@@ -1,0 +1,16 @@
+<div id="app">
+    <ul>
+        <li v-for="value in user">
+            <!-- v以降で in を加えたクラスの指定を行える -->
+            {{ value }}  
+        </li>
+    </ul>
+    <hr>
+    <ul>
+        <li v-for="(value , key) in user">
+            {{ key }} : {{ value }}
+        </li>
+    </ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
