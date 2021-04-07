@@ -1,3 +1,5 @@
+const draggable = window['vuedraggable'];
+
 var app = new Vue ({
     el: "#app",
     data: {
