@@ -5,3 +5,31 @@ li{
 #app li > span.done{
     text-decoration: line-through;
 }
+.box{
+    margin:2em 0;
+    position: relative;
+    padding: 0.5em 1.5em;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+.box:before, .box:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: black;
+}
+.box:before {left: 10px;}
+.box:after {right: 10px;}
+
+.card{
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    background: #f4f4f4;
+    border-left: solid 4px #5bb7ae;
+    box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.33);
+    width: 30%;
+    
+}
