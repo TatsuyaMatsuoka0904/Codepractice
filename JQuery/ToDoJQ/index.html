@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <ul>
     <div id="app">
         <div class="box">
             <div class="title">
@@ -20,13 +21,30 @@
         <draggable tag="ul">
             <li v-for="(todo ,index) in todos">
                 <div class="card">
-                    <!-- <input type="checkbox" v-model="todo.isDone"> -->
                     <span v-bind:class="{ done: todo.isDone}">{{ todo.item }}</span>
                     <button v-on:click="deleteItem(index)">Delete</button>
                 </div>
                 </li>
         </draggable>
         </div>
+        <div class="box">
+            <div class="title">
+                <input type="text" value="TODO">
+            </div>
+        <form v-on:submit.prevent>
+            <input type="text" v-model="newItem">
+            <button v-on:click="addItem">ADD</button>
+        </form>
+        <draggable tag="ul">
+            <li v-for="(todo ,index) in todos">
+                <div class="card">
+                    <span v-bind:class="{ done: todo.isDone}">{{ todo.item }}</span>
+                    <button v-on:click="deleteItem(index)">Delete</button>
+                </div>
+                </li>
+        </draggable>
+        </div>
+        </ul>
         <pre>{{ $data }}</pre>
     </div>
 
