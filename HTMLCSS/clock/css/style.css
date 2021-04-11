@@ -1,3 +1,32 @@
-p{
+html, body {
+    margin: 0;
+    width: 100%;
+    background-color: snow;
+}
+
+.main-container {
+    width: 100%;
+    height: 1080px;
+    position: relative;
+}
+
+h1 {
+    width: 100%;
+    margin-top: 15%;
+    position: absolute;
+    font-size: 8vw;
+    font-weight: bold;
+    text-align: center;
+    color: dimgray;
     font-family: 'Oswald', sans-serif;
+    letter-spacing: 5px;
+}
+
+#clock {
+    width: 100%;
+    position: absolute;
+    font-size: 9vw;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    margin-top: 25%;
 }
