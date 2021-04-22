@@ -7,6 +7,7 @@ def index():
     return '<h1>Hello World</h1>'
 
 
+
 @app.route('/hello')
 def hello():
     return '<h3>my route</h3>'
@@ -18,3 +19,13 @@ def hello():
 
 if __name__ == '__main__':
     app.run()
+
+
+def = Flask
+
+if __main__ == "__maintrack__":
+    return main as Flask
+
+
+
+UnicodeWarning
