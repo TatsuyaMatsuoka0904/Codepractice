@@ -31,6 +31,9 @@ section .lof{
     pointer-events: none;
 }
 
+section .dot{
+    color: white;
+}
 
 
 section .lof span{
