@@ -8,16 +8,7 @@
 	font-family: 'MyFont';
 	src: url(/HTMLCSS/lain/css/PressStart2P-Regular.ttf);
 }
-section{
 
-    position: relative;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    min-height: 100vh;
-    background: #111;
-    overflow: hidden;
-}
 section span{
     position: absolute;
     left: 30%;
@@ -29,6 +20,13 @@ section .lof{
     color: orange;
     user-select: none;
     pointer-events: none;
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #111;
+    overflow: hidden;
 }
 
 section .dot{
