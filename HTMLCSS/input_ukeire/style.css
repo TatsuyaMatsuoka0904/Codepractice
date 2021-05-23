@@ -1,0 +1,13 @@
+@page{ 
+  size:B5
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font: bold;
+}
+
+.print{
+  background-color: aqua;
+}
