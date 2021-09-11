@@ -2,7 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = 'https://produce-web.net' #取得したいサイトのURLに変える
+url = 'https://schedule.hololive.tv/' #取得したいサイトのURLに変える
 html = requests.get(url)
 soup = BeautifulSoup(html.content, "html.parser")
 
@@ -11,7 +11,7 @@ titles = []
 
 tmp_num = 1
 
-for element in soup.select('.entry-title'): #取得したい要素名に変える
+for element in soup.select('.col-6 col-sm-4 col-md-3'): #取得したい要素名に変える
     num.append(tmp_num)        #配列numに1から始まる整数を格納
     titles.append(element.text)#配列titleに取得した記事タイトルを格納
     tmp_num += 1
