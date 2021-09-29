@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'jobpit-db',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'Tatuya09040_',
         'HOST': 'localhost',
         'PORT': '3306'
     }

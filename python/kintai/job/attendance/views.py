@@ -4,17 +4,14 @@ from django.views.generic import TemplateView
 from .models import Attendances
 from datetime import date, datetime
  
- # Create your views here.
+
 class HomeView(LoginRequiredMixin, TemplateView):
-     # 表示するテンプレートを定義
      template_name = 'home.html'
-     # ログインがされてなかったらリダイレクトされるURL
      login_url = '/accounts/login/'
  
  
 class PushTimecard(LoginRequiredMixin, TemplateView):
      login_url = '/accounts/login/'
-     # POSTメソッドでリクエストされたら実行するメソッド
      def post(self, request, *args, **kwargs):
          push_type = request.POST.get('push_type')
  
@@ -24,8 +21,7 @@ class PushTimecard(LoginRequiredMixin, TemplateView):
          ).exists()
  
          response_body = {}
-         if push_type == 'attendance':
-             # 出勤したユーザーをDBに保存する
+         if push_type == 'attendance' and not is_attendanced:
              attendance = Attendances(user=request.user)
              attendance.save()
              response_time = attendance.attendance_time
@@ -35,7 +31,6 @@ class PushTimecard(LoginRequiredMixin, TemplateView):
              }
          elif push_type == 'leave':
              if is_attendanced:
-                 # 退勤するユーザーのレコードの退勤時間を更新する
                  attendance = Attendances.objects.filter(
                      user = request.user,
                      attendance_time__date = date.today()
