@@ -19,6 +19,10 @@ class PushTimecard(LoginRequiredMixin, TemplateView):
              user = request.user,
              attendance_time__date = date.today()
          ).exists()
+         is_left = Attendances.objects.filter(
+             user = request.user,
+             leave_time__date = date.today()
+         ).exists()
  
          response_body = {}
          if push_type == 'attendance' and not is_attendanced:
@@ -29,7 +33,7 @@ class PushTimecard(LoginRequiredMixin, TemplateView):
                  'result': 'success',
                  'attendance_time': response_time.strftime('%Y-%m-%d %H:%M:%S')
              }
-         elif push_type == 'leave':
+         elif push_type == 'leave' and not is_left:
              if is_attendanced:
                  attendance = Attendances.objects.filter(
                      user = request.user,
