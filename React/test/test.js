@@ -49,3 +49,25 @@ const summary = (num1,num2) => console.log(num1 + num2)
 summary(arr1[0],arr1[1])
 summary(...arr1)
 
+
+const nameArr = ["name1","name2","name3"]
+for (let index = 0; index < nameArr.length; index++) {
+    console.log(nameArr[index])
+}
+
+
+const nameArr2 = nameArr.map((name) => {
+    return name
+})
+console.log(nameArr2)
+
+
+const numArr = [1,2,3,4,5]
+const newNumArr = numArr.filter((num) => {
+    return num % 2 === 1
+})
+console.log(newNumArr)
+
+for (let index = 0; index < nameArr.length; index++) {
+    console.log(`${index + 1}: ${nameArr[index]}`)
+}
