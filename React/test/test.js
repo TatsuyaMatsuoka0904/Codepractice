@@ -48,3 +48,4 @@ const arr1 = [1,2]
 const summary = (num1,num2) => console.log(num1 + num2)
 summary(arr1[0],arr1[1])
 summary(...arr1)
+
