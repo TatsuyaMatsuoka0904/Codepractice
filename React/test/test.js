@@ -71,3 +71,16 @@ console.log(newNumArr)
 for (let index = 0; index < nameArr.length; index++) {
     console.log(`${index + 1}: ${nameArr[index]}`)
 }
+nameArr.map((name,index) => console.log(`map::${ index + 1 }: ${ name }`))
+
+
+const val1 = 1 > 0 ? "true" : "false"
+console.log(val1)
+
+
+const printFormattedNum = (num) => {
+    const formattedNum = typeof num === "number" ? num.toLocaleString() : "Input Number"
+    console.log(formattedNum)
+}
+printFormattedNum(1300)
+printFormattedNum("1300")
