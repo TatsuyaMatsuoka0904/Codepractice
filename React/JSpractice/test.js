@@ -84,3 +84,20 @@ const printFormattedNum = (num) => {
 }
 printFormattedNum(1300)
 printFormattedNum("1300")
+
+
+const checkedSumOver100 = (num1,num2) => {
+    return num1 + num2 > 100 ? "Over 100" : "Under Border"
+}
+console.log(checkedSumOver100(50,100))
+console.log(checkedSumOver100(50,10))
+
+
+const flag1 = true
+const flag2 = false
+if (flag1 || flag2) {
+    console.log("Which one TRUE")
+}
+if (flag1 || flag2) {
+    console.log("Both TRUE")
+}
