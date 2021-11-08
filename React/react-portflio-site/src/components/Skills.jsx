@@ -1,4 +1,36 @@
+import { useEffect, useReducer } from 'react'
+import axios from 'axios'
+import { skillReducer, initialState, actionTypes } from '../reducers/skillReducer.js'
+
 export const Skills = () => {
+    const [state,dispatch] = useReducer(skillReducer,initialState)
+
+    useEffect(() => {
+        dispatch({ type: actionTypes.fetch})
+        axios.get('https://api.github.com/users/TatsuyaMatsuoka0904/repos')
+            .then((response) => {
+                const languageList = response.data.map(res => res.language)
+                const countedLanguageList = generateLanguageCountObj(languageList)
+                dispatch({ type: actionTypes.success, payload: { languageList: countedLanguageList } })
+          })
+          .catch(() => {
+              dispatch({ type: actionTypes.error })
+          })
+      }, [])
+      
+      const generateLanguageCountObj = (allLanguageList) => {
+          const notNullLanguageList = allLanguageList.filter(language => language != null)
+          const uniqueLanguageList = [...new Set(notNullLanguageList)]
+
+          return uniqueLanguageList.map(item => {
+              return{
+                  language: item,
+                  count: allLanguageList.filter(langage => language === item).length
+              }
+          })
+      }
+    
+    
     return (
       <div id="skills">
         <div className="container">
