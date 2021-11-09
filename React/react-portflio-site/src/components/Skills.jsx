@@ -1,6 +1,7 @@
 import { useEffect, useReducer } from 'react'
 import axios from 'axios'
 import { skillReducer, initialState, actionTypes } from '../reducers/skillReducer.js'
+import { requestStates } from '../constants'
 
 export const Skills = () => {
     const [state,dispatch] = useReducer(skillReducer,initialState)
@@ -29,7 +30,12 @@ export const Skills = () => {
               }
           })
       }
-    
+
+      const converseCountToPercentage = (count) =>{
+          if (count > 10) { return 100 }
+          return count * 10
+      }
+
     
     return (
       <div id="skills">
@@ -38,6 +44,29 @@ export const Skills = () => {
             <h2>Skills</h2>
           </div>
           <div className="skills-container">
+              {
+                  state.requestState === requestStates.loading && (
+                      <p className="description">取得中...</p>
+                  )
+              }
+              {
+                    state.requestState === requestStates.success && (
+              state.languageList.map((item, index) => (
+                <div key={index}>
+                  <p className="description"><strong>{item.language}</strong></p>
+                  <Circle
+                    animate
+                    progress={converseCountToPercentage(item.count)}
+                  />
+                </div>
+              ))
+            )
+            　}
+              {
+                  state.requestStates === requestStates.error &&(
+                      <p className="description">ERROR</p>
+                  )
+              }
           </div>
         </div>
       </div>
