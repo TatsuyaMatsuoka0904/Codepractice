@@ -1,1 +1,11 @@
-document.querySelector('#seat').innerHTML = '<div class="seat__item">1</div>'
+const studentNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+let insertHTML = ''; 
+
+studentNumbers.forEach(function(num){
+    insertHTML += '<div class="seat__item">' + num + '</div>';
+    console.log(num);
+  })
+ 
+
+document.querySelector('#seat').innerHTML = insertHTML;
+const randomNum = Math.ceil(Math.random() * 10)
