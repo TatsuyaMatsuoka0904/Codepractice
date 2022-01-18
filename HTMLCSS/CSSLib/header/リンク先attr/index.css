@@ -1,0 +1,45 @@
+.attr {
+    padding-bottom: 40px;
+    overflow-x: scroll;
+}
+
+.attr ul {
+    white-space: nowrap;
+    margin: 20px 0 0 0;
+    padding: 0;
+    /* ulタグ内の点を消す */
+    list-style: none;
+    /* textをセンターに寄せる */
+    text-align: center;
+}
+
+.attr ul li {
+    /* 横並びにする */
+    display: inline-block;
+    /* liの距離変更 */
+    margin: 0 1em;
+}
+
+.attr ul li a {
+    display: inline-block;
+	padding: .2em 1em;
+	color: #333;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	line-height: 1;
+    /* 大文字化 */
+	text-transform: uppercase;
+    /* アンダーバーを消す */
+	text-decoration: none;
+}
+
+/** attr 重要部分 **/
+.attr ul li a::after {
+    /* データテキストをhtmlに記述する */
+	content: attr(data-text);
+    /* 下に記述する */
+	display: block;
+	margin-top: .7em;
+	color: #aaa;
+	font-size: 11px;
+}
