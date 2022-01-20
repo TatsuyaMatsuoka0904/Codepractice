@@ -2,12 +2,11 @@
     margin: 0;
     padding: 0;
 } */
-
-.light {
+.light-theme {
     background: #fff;
     color: #333;
   }
-.dark {
+  .dark-theme {
     background: #000;
     color: #ddd
-}
+  }
