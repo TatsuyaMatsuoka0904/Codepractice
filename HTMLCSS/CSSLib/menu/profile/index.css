@@ -1,0 +1,40 @@
+.user{
+  padding-left: 250px;
+  padding-right: 250px;
+}
+.menu {
+  list-style-type: none;
+  margin:2em 0;
+  position: absolute;
+  padding: 0.5em 1.5em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+}
+.menu:before, .menu:after{
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 2px;
+  height: -webkit-calc(100% + 20px);
+  height: calc(100% + 20px);
+  background-color: black;
+}
+.menu:before {left: 10px;}
+.menu:after {right: 10px;}
+.menu p {
+  margin: 0; 
+  padding: 0;
+}
+
+.button {
+    display: block;
+    padding: 16px 16px 16px 40px;
+    position: relative;
+    background-color: #fff;
+    overflow-wrap: break-word;
+    text-decoration: none;
+    color:#1e90ff;
+}
+.button:hover{
+  background-color:gainsboro;
+}
