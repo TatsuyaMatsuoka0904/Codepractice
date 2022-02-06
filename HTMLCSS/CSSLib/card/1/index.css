@@ -2,12 +2,17 @@
     width: 18rem;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 2rem;
     background-color: yellow;
+    float: left;
+    margin-left: 2rem;
+    margin-top: 1rem;
 }
 .parent {
-    display: grid;
+    /* display: grid; */
     place-items: center;
+    overflow: hidden;
+
 }
 .visual {
     aspect-ratio: 16 / 9;
