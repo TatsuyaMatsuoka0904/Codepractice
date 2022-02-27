@@ -1,0 +1,12 @@
+while(true) {
+    var servers = svan("home")
+    for (i in servers) {
+        if (hasRootAccess(server)) {
+            hack(server)
+            tprint(server + "のハックが完了しました")
+        } else {
+            nuke(server)
+            tprint(server + "の新規獲得をしました")
+        }
+    }
+}
