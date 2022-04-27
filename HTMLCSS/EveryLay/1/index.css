@@ -1,0 +1,9 @@
+:root {
+    font-size: calc(10rem + 0.5vm);
+}
+
+@media (min-width: 960px){
+    :root{
+        font-size: 125%;
+    }
+}
