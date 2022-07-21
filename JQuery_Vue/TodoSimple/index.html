@@ -15,10 +15,10 @@
         <form v-on:submit.prevent>
             <input type="text" v-model="newItem">
             <ul>
-                <li v-for="todo in todos">
+                <li v-for="(todo, index) in todos">
                     <input type="checkbox" v-model="todo.isDone">
                     <span v-bind:class="{ done: todo.isDone }">{{ todo.item }}</span>
-                    <button>Delete</button>
+                    <button v-on:click="deleteItem(index)">Delete</button>
                 </li>
             </ul>
             <button v-on:click="addItem ">ADD</button>
