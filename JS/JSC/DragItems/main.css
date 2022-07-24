@@ -1,0 +1,11 @@
+#dragItem {
+    width: 100px;
+    height: 100px;
+    background-color: #39a9d6;
+}
+
+#dropArea {
+    width: 200px;
+    height: 100px;
+    background-color: royalblue;
+}
