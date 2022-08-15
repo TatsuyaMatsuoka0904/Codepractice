@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/matsuokatatsuya/Documents/GitHub/Codepractice/testVS/testVS/testVS.csproj": {}
+  },
+  "projects": {
+    "/Users/matsuokatatsuya/Documents/GitHub/Codepractice/testVS/testVS/testVS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/matsuokatatsuya/Documents/GitHub/Codepractice/testVS/testVS/testVS.csproj",
+        "projectName": "testVS",
+        "projectPath": "/Users/matsuokatatsuya/Documents/GitHub/Codepractice/testVS/testVS/testVS.csproj",
+        "packagesPath": "/Users/matsuokatatsuya/.nuget/packages/",
+        "outputPath": "/Users/matsuokatatsuya/Documents/GitHub/Codepractice/testVS/testVS/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/matsuokatatsuya/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var colors = ["red", "blue", "green", "yellow", "purple"]
+        var index = 0
+
+        function insert() {
+            var parent = document.getElementById("mylist");
+            var item = document.createElement("li")
+            item.textContent = colors[index]
+            item.style.color = colors[index]
+            index = ++index % colors.length
+            parent.appendChild(item)
+        }
+    </script>
+    <button onclick="insert()">挿入</button>
+    <ol id="mylist"></ol>
+</body>
+
+</html>
