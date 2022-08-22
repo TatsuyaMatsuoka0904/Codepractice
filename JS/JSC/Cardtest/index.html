@@ -32,9 +32,41 @@
         }
 
         function myhandler0(e) {
-            if (strike == 0)
+            if (strike == 0) {
+                document.getElementById("card0").textContent = "0"
+            }
+        }
+
+        function myhandler1(e) {
+            if (strike == 1) {
+                document.getElementById("card1").textContent = "0"
+            }
+        }
+
+        function myhandler2(e) {
+            if (strike == 2) {
+                document.getElementById("card2").textContent = "0"
+            }
+        }
+
+        function shuffle(e) {
+            strike = Math.floor(Math.random() * 3)
+            document.getElementById("card0").textContent = ""
+            document.getElementById("card1").textContent = ""
+            document.getElementById("card2").textContent = ""
         }
     </script>
+
+    <div id="deck">
+        <table>
+            <tr>
+                <td class="card" id="card0"></td>
+                <td class="card" id="card1"></td>
+                <td class="card" id="card2"></td>
+            </tr>
+        </table>
+        <button id="shuffle">test</button>
+    </div>
 </body>
 
 </html>
