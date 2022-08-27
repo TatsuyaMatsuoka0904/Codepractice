@@ -169,12 +169,82 @@
                 }
                 put(px, py, WHITE)
             }
+            update()
+        }
+
+        function calcWeightData(tmpData) {
+            var score = 0
+            for (var x = 0; x < 8; x++) {
+                for (var y = 0; y < 8; y++) {
+                    if (tmpData[x][y] == WHITE) {
+                        score += WeightData[x][y]
+                    }
+                }
+            }
+            return score
+        }
+
+        function copyData() {
+            var tmpData = []
+            for (var x = 0; x < 8; x++) {
+                tmpData[x] = []
+                for (var y = 0; y < 8; y++) {
+                    tmpData[x][y] = data[x][y]
+                }
+            }
+            return tmpData
+        }
+
+        function canFlip(color) {
+            for (var x = 0; x < 8; x++) {
+                for (var y = 0; y < 8; y++) {
+                    var flipped = getFlipCell(x, y, color)
+                    if (flipped.length > 0) {
+                        return true
+                    }
+                }
+            }
+            return false
+        }
+
+        function getFlipCell(i, j, color) {
+            if (data[i][j] == BLACK || data[i][j] == WHITE) {
+                return []
+            }
+            var dirs = [
+                [-1, -1],
+                [0, -1],
+                [1, -1],
+                [-1, 0],
+                [1, 0],
+                [-1, 1],
+                [0, 1],
+                [1, 1]
+            ]
+            var result = []
+            for (var p = 0; p < dirs.length; p++) {
+                var flipped = getFlipCellsOneDir(i, j, dirs[p][0], dirs[p][1], color)
+                result = result.concat(flipped)
+            }
+            return result
+        }
+
+
+        function getFlipCellsOneDir(i, j, dx, dy, color) {
+            var x = i + dx
+            var y = j + dy
+            var fliped = []
+            if (x < 0 || y < 0 || ) {}
         }
     </script>
 </head>
 
-<body>
-
+<body onload="init()">
+    <h2>
+        黒 : <span id="numBlack"></span> 白 : <span id="numWhite"></span>
+    </h2>
+    <table id="board"></table>
+    <h2 id="message"></h2>
 </body>
 
 </html>
