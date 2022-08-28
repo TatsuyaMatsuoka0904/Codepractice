@@ -234,7 +234,19 @@
             var x = i + dx
             var y = j + dy
             var fliped = []
-            if (x < 0 || y < 0 || ) {}
+            if (x < 0 || y < 0 || x > 7 || y > 7 || data[x][y] == color || data[x][y] == 0) {
+                return []
+            }
+            fliped.push([x, y])
+            while (true) {
+                x += dx
+                y += dy
+                if (data[x][y] == color) {
+                    return fliped
+                } else {
+                    fliped.push([x, y])
+                }
+            }
         }
     </script>
 </head>
